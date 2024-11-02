@@ -35,8 +35,10 @@ void swap_values(double &a, double &b){
 
 int multiply(int x, int y){
     if (x==0 or y==0) return 0;
+    
+    if (x <0 or y<0) return x + multiply(x,y+1);
     return x + multiply(x,y-1);
-
+    
 }
 
 // Problem 4
